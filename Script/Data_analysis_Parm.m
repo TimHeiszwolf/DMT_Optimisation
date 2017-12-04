@@ -10,7 +10,7 @@ function Data_analysis_Parm = func(data)
     %This part selects the optimal projectile arm for each configuration
     for num=1:1:size_data(1)%Loop trough al datapoints
         datapoint=data(num,:);
-        if datapoint(1)==old_datapoint(1)&&datapoint(4)==old_datapoint(4)%Checks if the length of the counter-weight arm and angle is still equel
+        if datapoint(1)==old_datapoint(1)%Checks if the length of the counter-weight arm and angle is still equel
             if datapoint(10)>old_datapoint(10)%Checks if the distance of the new data point is larger than that of the old datapoint.
                 old_datapoint=datapoint;
             end
@@ -19,5 +19,5 @@ function Data_analysis_Parm = func(data)
             old_datapoint=datapoint;%The new datapoint is set as the old data point and teh cycle continues
         end
     end
-    Data_analysis_angle=filterd_data;
+    Data_analysis_Parm=filterd_data;
 end
