@@ -5,7 +5,6 @@ Just want to run the script? Easy:
 1. Download the script from this github page.
 2. Open the script with [Matlab](https://nl.mathworks.com/products/matlab.html).
 3. Run '_Controller_' and follow the instructions.
-4. 
 Also want to edit the script? Be sure to:
 1. Run the tests (run '_Testing_') and make sure they pass when an adjustment is made (or the test is adjusted).
 2. Make a new test for each new function.
@@ -33,7 +32,7 @@ Also want to edit the script? Be sure to:
 ## General design of script
 This script was written for a group project but it needed to be semi-profesional so an  (failed) attempt was made to keep it (semi-)profesional.
 
-First of all [SOC](https://en.wikipedia.org/wiki/Separation_of_concerns) needs to be maintained. This means that the script should be divided into parts with each part having its own function and possibly relying on the other parts. Secondly the script should have a clear structure. And lastly the script needs to be written using (a hybrid of) TDD (test driven development). To do this (semi-)automatic tests should be written (be)for(e) each function.
+First of all [SOC](https://en.wikipedia.org/wiki/Separation_of_concerns) needs to be maintained. This means that the script should be divided into parts with each part having its own function and possibly relying on the other parts. Secondly the script should have a clear structure. And lastly the script needs to be written using (a hybrid of) [TDD](https://en.wikipedia.org/wiki/Test-driven_development) (test driven development). To do this (semi-)automatic tests should be written (be)for(e) each function.
 
 Besides this good documentation (in the form of a report, comments (in the code) and good commit messages (on github)) is needed.
 
