@@ -22,7 +22,7 @@ function Controller = func()
         disp(' ')
     end
     
-    data=Data_analysis(data)
+    data=Data_analysis(data);
     
     if input('Write analysed output to .csv file (Y/N)?: ','s')=='Y'
         csvwrite(input('Filename (with.csv)?: ','s'),data)
