@@ -1,5 +1,5 @@
 ﻿# Design of a modern trebuchet optimisation
-This repository is a matlab code that was used to optimize a floating arm trebuchet for the course '4GA10 Design of a modern trebuchet 2017-2018Q1' of the TU/e (the Netherlands).
+This repository is a matlab code that was used to optimize a floating arm trebuchet for the course '4GA10 Design of a modern trebuchet 2017-2018Q2' of the TU/e (the Netherlands).
 ### How do I run the script?
 Do you just want to run the script? Easy:
 1. Download the script from this github page.
