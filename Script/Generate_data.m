@@ -33,11 +33,12 @@ function Generate_data = func()
     
     data=[ ];
     
-    for NumAarm=0:1:Max_steps_Aarm
-        for NumCarm=0:1:Max_steps_Carm
+    for NumAarm=1:1:(Max_steps_Aarm+1)
+        disp(strjoin({'Generation done',num2str(round(100*NumAarm/(Max_steps_Aarm+1),3)),'%'}))
+        for NumCarm=1:1:(Max_steps_Carm+1)
             for NumAngle=0:1:Max_steps_angle
-                Aarm=Max_len_Aarm*NumAarm/Max_steps_Aarm;
-                Carm=Max_len_Carm*NumCarm/Max_steps_Carm;
+                Aarm=Max_len_Aarm*NumAarm/(Max_steps_Aarm+1);
+                Carm=Max_len_Carm*NumCarm/(Max_steps_Carm+1);
                 Angle=Max_angle*NumAngle/Max_steps_angle;
                 
                 data=[data;[Aarm Carm -pi/2 Angle Mass_counter Mass_projectile Density_arms Starting_height 0 0]];
