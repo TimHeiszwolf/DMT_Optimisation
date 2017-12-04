@@ -40,7 +40,7 @@ function Generate_data = func()
                 Carm=Max_len_Carm*NumCarm/(Max_steps_Carm+1);
                 Angle=Max_angle*NumAngle/Max_steps_angle;
                 
-                data=[data;[Aarm Carm -pi/2 Angle Mass_counter Mass_projectile Density_arms Starting_height 0 0]];
+                data=[data;[Aarm Carm -pi/2 Angle Mass_counter Mass_projectile Density_arms Starting_height 0 0]];%TODO: Generate_data takes a lot of time. Most likely because of this line. Find a way to fix this.
                 %1:Projectilearm 2:Counter-weightarm 3:Startingangle 4:Endingangle 5:Masscounter 6:Massprojectile 7:Density 8:startingheight 9:Emptyvelocity 01:Emptydistance 
             end  
         end
