@@ -14,4 +14,10 @@ function Controller = func()
         data(num,:)=data_point;%The old data point in the data is replaced by the new data point with the calculated velocity and distance.
     end
     disp('Calculations done')
+    disp(' ')
+    
+    if input('Write output to .csv file (Y/N)?: ','s')=='Y'
+        csvwrite(input('Filename (with.csv)?: ','s'),data)
+    end
+    
 end
