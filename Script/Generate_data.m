@@ -34,7 +34,6 @@ function Generate_data = func()
     data=[ ];
     
     for NumAarm=1:1:(Max_steps_Aarm+1)
-        disp(strjoin({'Generation done',num2str(round(100*NumAarm/(Max_steps_Aarm+1),3)),'%'}))
         for NumCarm=1:1:(Max_steps_Carm+1)
             for NumAngle=0:1:Max_steps_angle
                 Aarm=Max_len_Aarm*NumAarm/(Max_steps_Aarm+1);
@@ -44,6 +43,7 @@ function Generate_data = func()
                 data=[data;[Aarm Carm -pi/2 Angle Mass_counter Mass_projectile Density_arms Starting_height 0 0]];
                 %1:Projectilearm 2:Counter-weightarm 3:Startingangle 4:Endingangle 5:Masscounter 6:Massprojectile 7:Density 8:startingheight 9:Emptyvelocity 01:Emptydistance 
             end
+        disp(strjoin({'Generation done',num2str(round(100*NumAarm/(Max_steps_Aarm+1),3)),'%'}))    
         end
     end
     
