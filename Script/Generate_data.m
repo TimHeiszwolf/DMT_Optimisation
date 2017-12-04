@@ -1,5 +1,7 @@
 function Generate_data = func()
-    %A function that generates the data for the controller
+    %A function that generates the data for the controller.
+    
+    %This part of the function asks the user for generation settings.
     if (input('Manual start data entry (Y/N): ','s')=='Y')
         Starting_height=input('Height of the launch platform (m): ');
         Mass_counter=input('Mass of the counterweight (kg): ');
@@ -21,10 +23,29 @@ function Generate_data = func()
         Max_len_Carm=0.3;
         Max_steps_Carm=4;
         Max_angle=60*pi/180;
-        Max_stepts_angle=4;
+        Max_steps_angle=4;
         disp('Assinged pre-defined values')
     end
     disp(' ')
     disp('Starting combinatory generation')
+    
+    %This part of the function cycles trhough al the combinations of variables and appends them to a matrix.
+    
+    data=[ ];
+    
+    for NumAarm=0:1:Max_steps_Aarm
+        for NumCarm=0:1:Max_steps_Carm
+            for NumAngle=0:1:Max_steps_angle
+                Aarm=Max_len_Aarm*NumAarm/Max_steps_Aarm;
+                Carm=Max_len_Carm*NumCarm/Max_steps_Carm;
+                Angle=Max_angle*NumAngle/Max_steps_angle;
+                
+                data=[data;[Aarm Carm -pi/2 Angle Mass_counter Mass_projectile Density_arms Starting_height]];
+                %1:Projectilearm 2:Counter-weightarm 3:Startingangle 4:Endingangle 5:Masscounter 6:Massprojectile 7:Density 8:startingheight 
+            end
+        end
+    end
+    
+    Generate_data=data;
     
 end
