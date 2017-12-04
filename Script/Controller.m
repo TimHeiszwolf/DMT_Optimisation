@@ -11,7 +11,7 @@ function Controller = func()
         data_point(9)=Cal_Velocity(Kinetic_Energy, Inertia, data_point(1));%The velocity is assinged
         data_point(10)=Cal_Distance(data_point(9), (pi/2-data_point(4)), data_point(8), data_point(2), data_point(1));%The distance is assinged
         
-        data(num,:)=data_point;%The old data point in the data is replaced by the new data point with the calculated velocity and distance.
+        data(num,:)=data_point;%The old data point in the data is replaced with the new data point which uses the calculated velocity and distance..
     end
     disp('Calculations done')
     disp(' ')

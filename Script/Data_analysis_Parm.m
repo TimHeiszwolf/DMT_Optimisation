@@ -1,5 +1,5 @@
 function Data_analysis_Parm = func(data)
-    %This function takes the data and selects the most interesting data and retuns it.
+    %This function selects the most interesting data in the results and returns it.
     %ONLY RUN THIS IF THE ANGLE HAS BEEN SORTED OR THIS WAS GENERATED BEFORE THE ANGLE!
     disp('Starting angle projectile arm analysis')
     
@@ -14,9 +14,9 @@ function Data_analysis_Parm = func(data)
             if datapoint(10)>old_datapoint(10)%Checks if the distance of the new data point is larger than that of the old datapoint.
                 old_datapoint=datapoint;
             end
-        else%If the lengths of counter-weight arm and the angle at both data point are not equel than old data point must be the largest of that series of datapoint with those arm lengths.
+        else%If the lengths of counter-weight arm and the angle at both data point are not equel, then old data point must be the largest of that series of datapoint with those arm lengths.
             filterd_data=[filterd_data;old_datapoint];%The datapoint with the highest distance (selected on the projectile arm) will be appended.
-            old_datapoint=datapoint;%The new datapoint is set as the old data point and teh cycle continues
+            old_datapoint=datapoint;%The new datapoint is set as the old data point and the cycle continues
         end
     end
     Data_analysis_Parm=filterd_data;
