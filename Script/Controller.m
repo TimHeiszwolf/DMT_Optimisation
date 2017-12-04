@@ -18,6 +18,8 @@ function Controller = func()
     
     if input('Write output to .csv file (Y/N)?: ','s')=='Y'
         csvwrite(input('Filename (with.csv)?: ','s'),data)
+        disp('Done writing .csv file')
+        disp(' ')
     end
     
 end
