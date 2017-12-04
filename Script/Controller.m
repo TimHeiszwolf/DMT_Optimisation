@@ -16,9 +16,17 @@ function Controller = func()
     disp('Calculations done')
     disp(' ')
     
-    if input('Write output to .csv file (Y/N)?: ','s')=='Y'
+    if input('Write raw output to .csv file (Y/N)?: ','s')=='Y'
         csvwrite(input('Filename (with.csv)?: ','s'),data)
-        disp('Done writing .csv file')
+        disp('Done writing raw output to.csv file')
+        disp(' ')
+    end
+    
+    data=Data_analysis(data)
+    
+    if input('Write analysed output to .csv file (Y/N)?: ','s')=='Y'
+        csvwrite(input('Filename (with.csv)?: ','s'),data)
+        disp('Done writing analysed output to .csv file')
         disp(' ')
     end
     
