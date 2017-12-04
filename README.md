@@ -5,6 +5,7 @@ Just want to run the script? Easy:
 1. Download the script from this github page.
 2. Open the script with [Matlab](https://nl.mathworks.com/products/matlab.html).
 3. Run '_Controller_' and follow the instructions.
+
 Also want to edit the script? Be sure to:
 1. Run the tests (run '_Testing_') and make sure they pass when an adjustment is made (or the test is adjusted).
 2. Make a new test for each new function.
