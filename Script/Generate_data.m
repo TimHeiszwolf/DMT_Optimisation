@@ -22,7 +22,7 @@ function Generate_data = func()
         Max_steps_Aarm=4;
         Max_len_Carm=0.3;
         Max_steps_Carm=4;
-        Max_angle=60*pi/180;
+        Max_angle=80*pi/180;
         Max_steps_angle=4;
         disp('Assinged pre-defined values')
     end
