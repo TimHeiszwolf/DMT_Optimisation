@@ -12,7 +12,7 @@ function Generate_data = func()
         Max_len_Carm=input('Maximal length of counter-weight arm (m): ');
         Max_steps_Carm=input('Steps of counter-weight arm: ');
         Max_angle=input('Maximal launch angle (deg): ')*pi/180;
-        Max_stepts_angle=input('Steps of launch angle: ');
+        Max_steps_angle=input('Steps of launch angle: ');
     else
         Starting_height=0.75;
         Mass_counter=0.224;
@@ -45,6 +45,9 @@ function Generate_data = func()
             end
         end
     end
+    
+    disp('Done generating data!')
+    disp(' ')
     
     Generate_data=data;
     
