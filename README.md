@@ -9,6 +9,8 @@ Do you just want to run the script? Easy:
 Do you also want to edit the script? Be sure to:
 1. Run the tests (run '_Testing_') and make sure they pass when an adjustment is made (or the test is adjusted).
 2. Make a new test for each new function.
+
+The old (broken) python version can be [downloaded here](https://pastebin.com/37xfA261).
 ### How does the script work?
 ![General design flowchart](https://i.imgur.com/JAVAiAV.png)
 1. When the program is started ‘_Controller_’ is going to ask ‘_Generate_data_’ for data. This is going to be a list of different combinations of variables for the bruteforcing. The user is asked for for input but can also choose to run with preset variables.
