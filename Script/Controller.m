@@ -1,4 +1,6 @@
 function Controller = func()
+    tic%Starts a time to see if a reminder for user input is needed.
+    
     data=Generate_data();%Generates the data
     
     length_loop=size(data);
@@ -16,13 +18,23 @@ function Controller = func()
     disp('Calculations done')
     disp(' ')
     
+    if toc>60%If the time since tic is long that it wil play a reminder
+        Play_audio('Matlab_user_input required.mp3')
+    end
+    
     if input('Write raw output to .csv file (Y/N)?: ','s')=='Y'
         csvwrite(input('Filename (with.csv)?: ','s'),data)
         disp('Done writing raw output to.csv file')
         disp(' ')
     end
     
+    tic%Starts a time to see if a reminder for user input is needed.
+    
     data=Data_analysis(data);
+    
+    if toc>15%If the time since tic is long that it wil play a reminder
+        Play_audio('Matlab_user_input required.mp3')
+    end
     
     if input('Write analysed output to .csv file (Y/N)?: ','s')=='Y'
         csvwrite(input('Filename (with.csv)?: ','s'),data)

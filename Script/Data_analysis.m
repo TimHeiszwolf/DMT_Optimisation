@@ -3,5 +3,7 @@ function Data_analysis = func(data)
     data=Data_analysis_angle(data);
     data=Data_analysis_Parm(data);
     
+    disp(' ')
+    
     Data_analysis=data;
 end
