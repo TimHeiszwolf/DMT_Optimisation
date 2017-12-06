@@ -24,7 +24,7 @@ else
 end
 
 %TESTING CAL_DISTANCE
-if (round(Cal_Distance(4.31,pi/4,0.80,0.1,0.2),2)==round(2.4885,2)&&round(Cal_Distance(7.823,pi/3,0.93,0.2,0.3),2)==round(4.4719,2))
+if (round(Cal_Distance(4.31,pi/4,0.80,0.1,0.2),2)==round(2.2895,2)&&round(Cal_Distance(7.823,pi/3,0.93,0.2,0.3),3)==round(5.4673,3))
     disp("Cal_Distance is functioning!")
 else
     disp("Cal_Distance IS NOT functioning")
