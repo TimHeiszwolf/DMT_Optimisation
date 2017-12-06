@@ -19,7 +19,7 @@ function Controller = func()
     disp(' ')
     
     if toc>60%If the time since tic is long that it wil play a reminder
-        Play_audio('Matlab_user_input required.mp3')
+        Play_audio('Matlab_user_input_required.mp3')
     end
     
     if input('Write raw output to .csv file (Y/N)?: ','s')=='Y'
@@ -33,7 +33,7 @@ function Controller = func()
     data=Data_analysis(data);
     
     if toc>15%If the time since tic is long that it wil play a reminder
-        Play_audio('Matlab_user_input required.mp3')
+        Play_audio('Matlab_user_input_required.mp3')
     end
     
     if input('Write analysed output to .csv file (Y/N)?: ','s')=='Y'
