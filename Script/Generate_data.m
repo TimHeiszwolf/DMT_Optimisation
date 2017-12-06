@@ -31,16 +31,19 @@ function Generate_data = func()
     
     %This part of the function cycles trhough al the combinations of variables and appends them to a matrix.
     
-    data=[ ];
+    size=(Max_steps_angle+1)*(Max_steps_Aarm+1)*(Max_steps_Carm+1);
+    data=zeros(size,10);
+    i=1;
     
     for NumAarm=1:1:(Max_steps_Aarm+1)
         for NumCarm=1:1:(Max_steps_Carm+1)
-            for NumAngle=0:1:Max_steps_angle
+            for NumAngle=1:1:(Max_steps_angle+1)
                 Aarm=Max_len_Aarm*NumAarm/(Max_steps_Aarm+1);
                 Carm=Max_len_Carm*NumCarm/(Max_steps_Carm+1);
-                Angle=Max_angle*NumAngle/Max_steps_angle;
+                Angle=Max_angle*NumAngle/(Max_steps_angle+1);
                 
-                data=[data;[Aarm Carm -pi/2 Angle Mass_counter Mass_projectile Density_arms Starting_height 0 0]];%TODO: Generate_data takes a lot of time. Most likely because of this line. Find a way to fix this.
+                data(i,:)=[Aarm Carm -pi/2 Angle Mass_counter Mass_projectile Density_arms Starting_height 0 0];
+                i=i+1;
                 %1:Projectilearm 2:Counter-weightarm 3:Startingangle 4:Endingangle 5:Masscounter 6:Massprojectile 7:Density 8:startingheight 9:Emptyvelocity 10:Emptydistance
             end
         end
