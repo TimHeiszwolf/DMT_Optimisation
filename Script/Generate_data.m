@@ -19,11 +19,11 @@ function Generate_data = func()
         Mass_projectile=0.005;
         Density_arms=((10*2*2+8*2*2)*10^-6)*(930);%Density of material is 0.93 gr/cm^3. This is assuming a hollow square beam (10x10 mm) with a ticknis of 2 mm. So in this case it is 0.06696 kg/m.
         Max_len_Aarm=0.3;
-        Max_steps_Aarm=4;
-        Max_len_Carm=0.3;
-        Max_steps_Carm=4;
+        Max_steps_Aarm=299;
+        Max_len_Carm=0.2;
+        Max_steps_Carm=199;
         Max_angle=80*pi/180;
-        Max_steps_angle=4;
+        Max_steps_angle=160;
         disp('Assinged pre-defined values')
     end
     disp(' ')
