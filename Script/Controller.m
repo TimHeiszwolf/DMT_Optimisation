@@ -5,20 +5,47 @@ function Output_data = Controller()
     
     length_loop=size(data);
     
+    if toc>30%If the time since tic is long that it wil play a reminder
+        Play_audio('Matlab_user_input_required.mp3')
+    end
+    
     disp('Starting calculations')
-    for num=1:1:length_loop(1)%Starts a loop for each variation in the data
-        data_point=data(num,:);
-        Inertia=Cal_Inertia(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7));
-        Kinetic_Energy=Cal_Kinetic_Energy(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7), data_point(3), data_point(4));
-        data_point(9)=Cal_Velocity(Kinetic_Energy, Inertia, data_point(1));%The velocity is assinged
-        data_point(10)=Cal_Distance(data_point(9), (pi/2-data_point(4)), data_point(8), data_point(2), data_point(1));%The distance is assinged
+    disp(' ')
+    
+    tic
+    
+    if input('Calculate distance numericaly with friction (Y/N)?: ','s')=='Y'
         
-        data(num,:)=data_point;%The old data point in the data is replaced with the new data point which uses the calculated velocity and distance..
+        Surface_projectile=input('Cross sectional surface area of projectile (m^2): ');
+        Delta_time=input('Delta time for the numerical calulations (s): ');
+        
+        for num=1:1:length_loop(1)%Starts a loop for each variation in the data
+            data_point=data(num,:);
+            Inertia=Cal_Inertia(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7));
+            Kinetic_Energy=Cal_Kinetic_Energy(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7), data_point(3), data_point(4));
+            data_point(9)=Cal_Velocity(Kinetic_Energy, Inertia, data_point(1));%The velocity is assinged
+            data_point(10)=Cal_Distance_numerical(data_point(9), (pi/2-data_point(4)), data_point(8), data_point(2), data_point(1), data_point(6), Surface_projectile, Delta_time);%The distance is assinged
+            
+            data(num,:)=data_point;%The old data point in the data is replaced with the new data point which uses the calculated velocity and distance..
+        end
+        
+    else
+        
+        for num=1:1:length_loop(1)%Starts a loop for each variation in the data
+            data_point=data(num,:);
+            Inertia=Cal_Inertia(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7));
+            Kinetic_Energy=Cal_Kinetic_Energy(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7), data_point(3), data_point(4));
+            data_point(9)=Cal_Velocity(Kinetic_Energy, Inertia, data_point(1));%The velocity is assinged
+            data_point(10)=Cal_Distance(data_point(9), (pi/2-data_point(4)), data_point(8), data_point(2), data_point(1));%The distance is assinged
+            
+            data(num,:)=data_point;%The old data point in the data is replaced with the new data point which uses the calculated velocity and distance..
+        end
+        
     end
     disp('Calculations done')
     disp(' ')
     
-    if toc>60%If the time since tic is long that it wil play a reminder
+    if toc>30%If the time since tic is long that it wil play a reminder
         Play_audio('Matlab_user_input_required.mp3')
     end
     
