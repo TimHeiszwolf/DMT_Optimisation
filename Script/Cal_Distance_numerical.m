@@ -7,8 +7,8 @@ function Distance = Cal_Distance_numerical(Launch_velocity, Launch_angle, Start_
     x=-cos(pi/2-Launch_angle)*(Length_counter+Length_projectile);
     y=Start_Y;
     
-    vx=cos(Launch_angle)*Launch_velocity;
-    vy=cos(Launch_angle)*Launch_velocity;
+    vx=cos(pi/2-Launch_angle)*Launch_velocity;
+    vy=sin(pi/2-Launch_angle)*Launch_velocity;
     
     while y>0
         x=x+vx*Delta_time;
