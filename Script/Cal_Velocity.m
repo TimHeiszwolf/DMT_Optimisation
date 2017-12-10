@@ -1,9 +1,9 @@
-function Cal_Velocity = func(Energy, Inertia, Length)
+function Velocity = Cal_Velocity(Energy, Inertia, Length)
     %-	A function which calculates the speed of a point on a rotating arm based on rotational energy https://en.wikipedia.org/wiki/Rotational_energy.
-    Velocity = Length*((2*Energy/Inertia)^0.5);
+    Calculated_Velocity = Length*((2*Energy/Inertia)^0.5);
     
-    if isreal(Velocity)==1
-        Cal_Velocity=Velocity;
+    if isreal(Calculated_Velocity)==1
+        Velocity=Calculated_Velocity;
     else
-        Cal_Velocity=-10;
+        Velocity=-10;
 end

@@ -1,4 +1,4 @@
-function Generate_data = func()
+function Start_data = Generate_data()
     %A function that generates the data for the controller.
     
     %This part of the function asks the user for generation settings.
@@ -53,6 +53,6 @@ function Generate_data = func()
     disp('Done generating data!')
     disp(' ')
     
-    Generate_data=data;
+    Start_data=data;
     
 end

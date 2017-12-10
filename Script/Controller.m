@@ -1,4 +1,4 @@
-function Controller = func()
+function Output_data = Controller()
     tic%Starts a time to see if a reminder for user input is needed.
     
     data=Generate_data();%Generates the data

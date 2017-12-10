@@ -1,9 +1,9 @@
-function Data_analysis = func(data)
+function Output_data = Data_analysis(data)
     %This function selects the most interesting data in the results and returns it..
     data=Data_analysis_angle(data);
     data=Data_analysis_Parm(data);
     
     disp(' ')
     
-    Data_analysis=data;
+    Output_data=data;
 end

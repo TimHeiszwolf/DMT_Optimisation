@@ -1,4 +1,4 @@
-function Data_analysis_angle = func(data)
+function Output_data = Data_analysis_angle(data)
     %This function selects the most interesting data in the results and
     %returns it.
     disp('Starting angle data analysis')
@@ -19,5 +19,5 @@ function Data_analysis_angle = func(data)
             old_datapoint=datapoint;%The new datapoint is set as the old data point and the cycle continues
         end
     end
-    Data_analysis_angle=filterd_data;
+    Output_data=filterd_data;
 end
