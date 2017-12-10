@@ -16,7 +16,7 @@ function Output_data = Controller()
     
     if input('Calculate distance numericaly with friction (Y/N)?: ','s')=='Y'
         
-        Surface_projectile=input('Cross sectional surface area of projectile (m^2): ');
+        Surface_projectile=input('Cross sectional surface area of projectile (m^2): ');%A=pi*(3*m/(4*pi*rho))^(2/3) for 5 grams and 0.93 gr/kg thats 0.000371
         Delta_time=input('Delta time for the numerical calulations (s): ');
         
         for num=1:1:length_loop(1)%Starts a loop for each variation in the data
