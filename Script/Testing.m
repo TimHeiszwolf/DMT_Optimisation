@@ -30,4 +30,11 @@ else
     disp("Cal_Distance IS NOT functioning")
 end
 
+%TESTING CAL_DISTANCE_NUMERICAL
+if (round(Cal_Distance_numerical(4.31,pi/4,0.80,0.1,0.2,0.005,0.001,0.001),2)==round(2.0902,2)&&(round(Cal_Distance_numerical(4.31,pi/4,0.80,0.1,0.2,0.005,0,0.00001),3)==round(Cal_Distance(4.31,pi/4,0.80,0.1,0.2),3)))
+    disp('Cal_Distance_numerical is functioning')
+else
+    disp('Cal_Distance_numerical is NOT functioning')
+end
+
 disp(" ")
