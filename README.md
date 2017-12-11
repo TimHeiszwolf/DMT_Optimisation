@@ -19,8 +19,8 @@ The old (broken) python version can be [downloaded here](https://pastebin.com/37
 4. ‘_Calculate_Kinetic_Energy_’ and ‘_Calculate_Inertia_’ calculate gravitational energy and inertia and return these to ‘_Controller_’.
 5. ‘_Controller_’ gives the item of the data and the results of ‘Calculate_Kinetic_Energy’ and ‘_Calculate_Inertia_’ to ‘_Calculate_Velocity_’.
 6. ‘_Calculate_Velocity_’ calculates the velocity and returns this to ‘_Controller_’.
-7. ‘_Controller_’ gives the item of the data and the result of ‘_Calculate_Velocity_’ to ‘Calculate_Distance’.
-8. ‘_Calculate_Distance_’ calculates the distance travelled and returns this to ‘_Controller_’.
+7. ‘_Controller_’ gives the item of the data and the result of ‘_Calculate_Velocity_’ to ‘_Calculate_Distance_’ or '_Calculate_Distance_numerical_'.
+8. ‘_Calculate_Distance_’ or '_Calculate_Distance_numerical_' calculates the distance travelled and returns this to ‘_Controller_’.
 9. ‘_Controller_’ stores the result of ‘_Calculate_Velocity_’ and ‘_Calculate_Distance_’ in the item of the data.
 10. ‘_Controller_’ overwrites the old item of the data in the data list with the item of the data from step 9
 11. ‘_Controller_’ repeats steps 2 till 10 for each item in the list of data.
