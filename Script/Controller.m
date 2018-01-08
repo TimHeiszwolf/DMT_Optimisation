@@ -52,6 +52,8 @@ function Output_data = Controller()
     if input('Write raw output to .csv file (Y/N)?: ','s')=='Y'
         csvwrite(input('Filename (with.csv)?: ','s'),data)
         disp('Done writing raw output to.csv file')
+        disp('These collums correspond to these values')
+        disp('1:Projectilearm 2:Counterweightarm 3:Startingangle 4:Endingangle 5:Masscounter 6:Massprojectile 7:Density 8:Startingheight 9:Velocity 10:Distance')
         disp(' ')
     end
     
@@ -66,6 +68,8 @@ function Output_data = Controller()
     if input('Write analysed output to .csv file (Y/N)?: ','s')=='Y'
         csvwrite(input('Filename (with.csv)?: ','s'),data)
         disp('Done writing analysed output to .csv file')
+        disp('These collums correspond to these values')
+        disp('1:Projectilearm 2:Counterweightarm 3:Startingangle 4:Endingangle 5:Masscounter 6:Massprojectile 7:Density 8:Startingheight 9:Velocity 10:Distance')
         disp(' ')
     end
     
