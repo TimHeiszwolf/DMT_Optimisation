@@ -20,6 +20,11 @@ function Output_data = Controller()
         Delta_time=input('Delta time for the numerical calulations (s): ');
         
         for num=1:1:length_loop(1)%Starts a loop for each variation in the data
+            
+            if mod(num,(length_loop(1)/1000))==0
+                disp(strjoin({'Calculation done',num2str(round(100*num/(length_loop(1)),3)),'%'}))
+            end
+            
             data_point=data(num,:);
             Inertia=Cal_Inertia(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7));
             Kinetic_Energy=Cal_Kinetic_Energy(data_point(5), data_point(2), data_point(6), data_point(1), data_point(7), data_point(3), data_point(4));
